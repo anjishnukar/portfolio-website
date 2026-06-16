@@ -4,44 +4,55 @@ import { FiArrowRight } from "react-icons/fi";
 
 export const HoverImageLinks = () => {
   return (
-    <section className="bg-neutral-950 p-4 md:p-8">
+    <section className="bg-zinc-900 p-4 md:p-8">
       <div className="mx-auto max-w-5xl">
         <Link
-          heading="About"
-          subheading="Learn what we do here"
-          imgSrc="/imgs/random/11.jpg"
-          href="#"
+          heading="RISC-V RV32I Processor"
+          subheading="Designed and simulated a 5-stage pipelined RISC-V RV32I processor in Verilog with full data forwarding, hazard detection, and branch flushing. Verified against 5 test programs using a self-checking testbench; achieved CPI of 1.08 on arithmetic-heavy workloads. Stack used: Icarus Verilog for simulation, GTKWave for waveform viewing, and Visual Studio Code with Verilog extensions for development."
+          stack="Verilog, Icarus Verilog, GTKWave"
+          imgSrc="src\assets\riscv.png"
+          href="https://github.com/anjishnukar/RISCV-RV32I-Processor"
         />
         <Link
-          heading="Clients"
-          subheading="We work with great people"
+          heading="Bare-metal RTOS in C"
+          subheading="Implemented a preemptive bare-metal RTOS from scratch in C and ARM Thumb-2 assembly for Cortex-M3, including cooperative/preemptive scheduler, context switching via PendSV, counting semaphores with blocked task queues, and stack overflow detection. Verified using QEMU emulation and GDB remote debugging"
           imgSrc="/imgs/random/6.jpg"
           href="#"
         />
         <Link
-          heading="Portfolio"
-          subheading="Our work speaks for itself"
+          heading="RISC-V Assembly Optimisation"
+          subheading=""
+          stack="RISC-V Assembly"
           imgSrc="/imgs/random/4.jpg"
           href="#"
         />
         <Link
-          heading="Careers"
-          subheading="We want cool people"
-          imgSrc="/imgs/random/5.jpg"
+          heading="HTTP Server in C"
+          subheading=""
+          stack="C, POSIX Sockets"
+          imgSrc="/imgs/random/4.jpg"
           href="#"
         />
         <Link
-          heading="Fun"
-          subheading="Incase you're bored"
-          imgSrc="/imgs/random/10.jpg"
-          href="#"
+          heading="EDC Auditions Page"
+          subheading="Designed and deployed a full-stack web application using React, Tailwind CSS, and Django to automate and streamline the club’s annual recruitment pipeline. Implemented fluid, dynamic user interfaces with Framer Motion to elevate user engagement and simplify a multi-step registration form for 200+ applicants. Centralized applicant data management on the backend, eliminating manual tracking and drastically reducing administrative overhead for the core team."
+          stack="React, TailwindCSS, Framer Motion, Node.js"
+          imgSrc="src\assets\auditions.png"
+          href="https://github.com/anjishnukar/Auditions-Page"
+        />
+        <Link
+          heading="NIT Durgapur's E-Summit Website"
+          subheading="Engineered and deployed the official full-stack website for the second-largest entrepreneurial festival in East India, successfully supporting 2,000+ active participants. Designed and coded an interactive, gamified QR Hunt web application, implementing real-time progress tracking and secure backend validation for live festival attendees."
+          stack = "GSAP, BootstrapCSS, Django"
+          imgSrc="src\assets\esummit.png"
+          href="https://github.com/anjishnukar/ESUMMIT-25"
         />
       </div>
     </section>
   );
 };
 
-const Link = ({ heading, imgSrc, subheading, href }) => {
+const Link = ({ heading, imgSrc, subheading, stack, href }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -72,6 +83,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
   return (
     <motion.a
       href={href}
+      target="_blank"
       ref={ref}
       onMouseMove={handleMouseMove}
       initial="initial"
@@ -89,7 +101,7 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
             staggerChildren: 0.075,
             delayChildren: 0.25,
           }}
-          className="relative z-10 block text-4xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-6xl"
+          className="relative z-10 block text-3xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-3xl"
         >
           {heading.split("").map((l, i) => (
             <motion.span
@@ -101,12 +113,12 @@ const Link = ({ heading, imgSrc, subheading, href }) => {
               className="inline-block"
               key={i}
             >
-              {l}
+              {l === " " ? "\u00A0" : l}
             </motion.span>
           ))}
         </motion.span>
         <span className="relative z-10 mt-2 block text-base text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50">
-          {subheading}
+          {subheading} <br /> Stack Used: {stack}
         </span>
       </div>
 

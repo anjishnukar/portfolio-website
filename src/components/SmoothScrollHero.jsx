@@ -12,7 +12,7 @@ import EncryptButton from "./buttons/EncryptButton";
 
 export const SmoothScrollHero = () => {
   return (
-    <div className="bg-zinc-950">
+    <div className="bg-zinc-900">
       <ReactLenis
         root
         options={{
@@ -22,7 +22,7 @@ export const SmoothScrollHero = () => {
           //   syncTouch: true,
         }}
       >
-        <Nav />
+        {/* <Nav /> */}
         <Hero />
         <Schedule />
       </ReactLenis>
@@ -60,7 +60,7 @@ const Hero = () => {
 
       <ParallaxImages />
 
-      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" />
+      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-900/0 to-zinc-900" />
     </div>
   );
 };
@@ -75,12 +75,12 @@ const CenterImage = () => {
 
   const backgroundSize = useTransform(
     scrollY,
-    [0, SECTION_HEIGHT + 500],
-    ["170%", "100%"]
+    [0, SECTION_HEIGHT + 4000],
+    ["100%", "25%"]
   );
   const opacity = useTransform(
     scrollY,
-    [SECTION_HEIGHT, SECTION_HEIGHT + 500],
+    [SECTION_HEIGHT, SECTION_HEIGHT + 4000],
     [1, 0]
   );
 
@@ -92,7 +92,7 @@ const CenterImage = () => {
         backgroundSize,
         opacity,
         backgroundImage:
-          "url(https://images.unsplash.com/photo-1460186136353-977e9d6085a1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          "url(src/assets/anjishnudrawing.jpg)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
@@ -104,33 +104,34 @@ const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="src\assets\anjishnuguitar.jpg"
         alt="And example of a space launch"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1446776709462-d6b525c57bd3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="src\assets\anjishnuinterview.png"
         alt="An example of a space launch"
         start={200}
-        end={-250}
+        end={-400}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="src\assets\anjishnukeyboard.jpg"
         alt="Orbiting satellite"
-        start={-200}
-        end={200}
+        start={-1000}
+        end={-1300}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1494022299300-899b96e49893?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="src\assets\anjishnurun.jpg"
         alt="Orbiting satellite"
-        start={0}
-        end={-500}
+        start={-600}
+        end={-900}
         className="ml-24 w-5/12"
       />
+      
     </div>
   );
 };
@@ -172,15 +173,11 @@ const Schedule = () => {
         transition={{ ease: "easeInOut", duration: 0.75 }}
         className="mb-20 text-4xl font-black uppercase text-zinc-50"
       >
-        Projects
+        Fun Stuff
       </motion.h1>
-      <ScheduleItem title="NG-21" date="Dec 9th" location="Florida" />
+      <ScheduleItem title="my playlists" date="Dec 9th" location="Florida" />
       <ScheduleItem title="Starlink" date="Dec 20th" location="Texas" />
       <ScheduleItem title="Starlink" date="Jan 13th" location="Florida" />
-      <ScheduleItem title="Turksat 6A" date="Feb 22nd" location="Florida" />
-      <ScheduleItem title="NROL-186" date="Mar 1st" location="California" />
-      <ScheduleItem title="GOES-U" date="Mar 8th" location="California" />
-      <ScheduleItem title="ASTRA 1P" date="Apr 8th" location="Texas" />
     </section>
   );
 };
@@ -198,8 +195,6 @@ const ScheduleItem = ({ title, date, location }) => {
         <p className="text-sm uppercase text-zinc-500">{date}</p>
       </div>
       <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
-        {/* <p>{location}</p>
-        <FiMapPin /> */}
         <EncryptButton />
       </div>
     </motion.div>

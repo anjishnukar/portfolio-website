@@ -6,6 +6,7 @@ import { SiGithub, SiGmail, SiIndeed, SiLeetcode, SiSubstack } from "react-icons
 import DivOrigami from "./LogoOrigami";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdDocument } from "react-icons/io";
+import { Spotify } from "react-spotify-embed";
 
 export const RevealBento = () => {
   return (
@@ -23,7 +24,7 @@ export const RevealBento = () => {
         <SocialsBlock />
         <AboutBlock />
         <LocationBlock />
-        {/* <EmailListBlock /> */}
+        <SpotifyBlock />
       </motion.div>
       <Footer />
     </div>
@@ -63,7 +64,7 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block className="col-span-12 row-span-2 md:col-span-6">
     <img
-      src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
+      src="https://api.dicebear.com/10.x/notionists/svg?clothesVariant=variant23&clothesGraphicVariant=galaxy&clothesGraphicProbability=100&glassesVariant=variant11&hairVariant=variant20&mouthVariant=variant25&noseVariant=variant05&eyesVariant=variant01&eyebrowsVariant=variant10&gestureVariant=hand&gestureProbability=100&beardVariant=&glassesProbability=100&backgroundColor=b6e3f4&seed=anjishnu"
       alt="avatar"
       className="mb-4 size-14 rounded-full"
     />
@@ -77,7 +78,7 @@ const HeaderBlock = () => (
       href="#"
       className="flex items-center gap-1 text-red-300 hover:underline"
     >
-      View my Resume <IoMdDocument />
+      view my resume <IoMdDocument />
     </a>
   </Block>
 );
@@ -92,7 +93,8 @@ const SocialsBlock = () => (
       className="col-span-6 bg-blue-500 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://www.linkedin.com/in/anjishnukar/"
+        target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <FaLinkedin />
@@ -106,7 +108,7 @@ const SocialsBlock = () => (
       className="col-span-6 bg-black-500 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://github.com/anjishnukar"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiGithub />
@@ -120,7 +122,8 @@ const SocialsBlock = () => (
       className="col-span-6 bg-red-500 md:col-span-3"
     >
       <a
-        href="#"
+        href="mailto:anjishnukar02@gmail.com"
+        target="_blank"
         className="grid h-full place-content-center text-3xl text-black"
       >
         <SiGmail/>
@@ -135,6 +138,7 @@ const SocialsBlock = () => (
     >
       <a
         href="#"
+        target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiSubstack />
@@ -158,16 +162,16 @@ const AboutBlock = () => (
 );
 
 const LocationBlock = () => (
-  <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
+  <Block className="col-span-12 flex flex-col items-center justify-center gap-4 md:col-span-3">
     <FiMapPin className="text-3xl" />
-    <p className="text-center text-lg text-zinc-400">Bangalore</p>
+    <p className="text-center text-lg text-zinc-400">Bangalore, KA</p>
   </Block>
 );
 
-const EmailListBlock = () => (
+const SpotifyBlock = () => (
   <Block className="col-span-12 md:col-span-9">
-    <p className="mb-3 text-lg">Join my mailing list</p>
-    <form
+    <p className="mb-3 text-lg">my current obsession</p>
+    {/* <form
       onSubmit={(e) => e.preventDefault()}
       className="flex items-center gap-2"
     >
@@ -182,7 +186,8 @@ const EmailListBlock = () => (
       >
         <FiMail /> Join the list
       </button>
-    </form>
+    </form> */}
+    <Spotify wide link="https://open.spotify.com/album/1BZoqf8Zje5nGdwZhOjAtD?si=l1xGxefFRpiT4xy7sx0m3A" />
   </Block>
 );
 

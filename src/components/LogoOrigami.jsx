@@ -5,7 +5,7 @@ import { twMerge } from "tailwind-merge";
 
 export const DivOrigami = () => {
   return (
-    <section className="flex h-72 flex-col items-center justify-center gap-12 bg-neutral-950 px-4 py-24 md:flex-row">
+    <section className="flex h-72 flex-col items-center justify-center gap-12 bg-zinc-900 px-4 py-24 md:flex-row">
       <LogoRolodex
         items={[
           <LogoItem key={1} className="bg-green-300 text-neutral-900">
