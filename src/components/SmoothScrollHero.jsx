@@ -26,6 +26,7 @@ export const SmoothScrollHero = () => {
         <Hero />
         <Schedule />
       </ReactLenis>
+      <Footer />
     </div>
   );
 };
@@ -105,28 +106,28 @@ const ParallaxImages = () => {
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
         src="src\assets\anjishnuguitar.jpg"
-        alt="And example of a space launch"
+        alt="anjishnu playing guitar"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
         src="src\assets\anjishnuinterview.png"
-        alt="An example of a space launch"
+        alt="anjishnu interviewing someone"
         start={200}
         end={-400}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
         src="src\assets\anjishnukeyboard.jpg"
-        alt="Orbiting satellite"
+        alt="anjishnu playing keyboard"
         start={-1000}
         end={-1300}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
         src="src\assets\anjishnurun.jpg"
-        alt="Orbiting satellite"
+        alt="anjishnu running"
         start={-600}
         end={-900}
         className="ml-24 w-5/12"
@@ -175,14 +176,15 @@ const Schedule = () => {
       >
         Fun Stuff
       </motion.h1>
-      <ScheduleItem title="my playlists" date="Dec 9th" location="Florida" />
-      <ScheduleItem title="Starlink" date="Dec 20th" location="Texas" />
-      <ScheduleItem title="Starlink" date="Jan 13th" location="Florida" />
+      <ScheduleItem title="my playlists" desc="stuff i listen to while doing almost anything" link="https://open.spotify.com/user/d8j6bn51h5zvw0ltx05devvs4?si=ff11e68d21554920" />
+      <ScheduleItem title="my art and photography" desc="a bit of tomfoolery, a bit of recreation" link="https://vsco.co/anjishnukar/gallery" />
+      <ScheduleItem title="my reads (essays)" desc="and maybe my writes (at some point)?" link="https://substack.com/@anjishnukar" />
+      <ScheduleItem title="my book shelf" desc="books that i have read, been reading and dropped" link="https://www.goodreads.com/user/show/201906375-anjishnu-kar" />
     </section>
   );
 };
 
-const ScheduleItem = ({ title, date, location }) => {
+const ScheduleItem = ({ title, desc, link }) => {
   return (
     <motion.div
       initial={{ y: 48, opacity: 0 }}
@@ -192,12 +194,25 @@ const ScheduleItem = ({ title, date, location }) => {
     >
       <div>
         <p className="mb-1.5 text-xl text-zinc-50">{title}</p>
-        <p className="text-sm uppercase text-zinc-500">{date}</p>
+        <p className="text-sm text-zinc-500">{desc}</p>
       </div>
       <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
-        <EncryptButton />
+        <EncryptButton link={link} />
       </div>
     </motion.div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="pb-24">
+      <p className="text-center text-zinc-400">
+        Made with ❤️ by{" "}
+        <a href="https://github.com/anjishnukar" target="_blank" className="text-red-300 hover:underline">
+          @anjishnukar
+        </a> | © 2026
+      </p>
+    </footer>
   );
 };
 

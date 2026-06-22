@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiGithub, SiGmail, SiIndeed, SiLeetcode, SiSubstack } from "react-icons/si";
+import { SiBluesky, SiGithub, SiGmail, SiIndeed, SiLeetcode, SiSpotify, SiSubstack, SiVsco } from "react-icons/si";
 import DivOrigami from "./LogoOrigami";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdDocument } from "react-icons/io";
@@ -26,7 +26,6 @@ export const RevealBento = () => {
         <LocationBlock />
         <SpotifyBlock />
       </motion.div>
-      <Footer />
     </div>
   );
 };
@@ -109,6 +108,7 @@ const SocialsBlock = () => (
     >
       <a
         href="https://github.com/anjishnukar"
+        target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiGithub />
@@ -134,14 +134,14 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-orange-500 md:col-span-3"
+      className="col-span-6 bg-green-600 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://open.spotify.com/user/d8j6bn51h5zvw0ltx05devvs4?si=ff11e68d21554920"
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiSubstack />
+        <SiSpotify />
       </a>
     </Block>
   </>
@@ -162,7 +162,11 @@ const AboutBlock = () => (
 );
 
 const LocationBlock = () => (
-  <Block className="col-span-12 flex flex-col items-center justify-center gap-4 md:col-span-3">
+  <Block 
+    whileHover={{
+        scale: 1.05,
+      }}
+    className="col-span-12 flex flex-col items-center justify-center gap-4 md:col-span-3">
     <FiMapPin className="text-3xl" />
     <p className="text-center text-lg text-zinc-400">Bangalore, KA</p>
   </Block>
@@ -170,7 +174,7 @@ const LocationBlock = () => (
 
 const SpotifyBlock = () => (
   <Block className="col-span-12 md:col-span-9">
-    <p className="mb-3 text-lg">my current obsession</p>
+    <p className="mb-3 text-lg"><strong>my current obsession</strong></p>
     {/* <form
       onSubmit={(e) => e.preventDefault()}
       className="flex items-center gap-2"
@@ -214,17 +218,5 @@ const Logo = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer className="mt-12">
-      <p className="text-center text-zinc-400">
-        Made with ❤️ by{" "}
-        <a href="https://github.com/anjishnukar" target="_blank" className="text-red-300 hover:underline">
-          @anjishnukar
-        </a>
-      </p>
-    </footer>
-  );
-};
 
 export default RevealBento;
