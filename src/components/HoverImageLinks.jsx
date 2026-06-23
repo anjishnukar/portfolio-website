@@ -11,7 +11,7 @@ export const HoverImageLinks = () => {
           heading="RISC-V RV32I Processor"
           subheading="Designed and simulated a 5-stage pipelined RISC-V RV32I processor in Verilog with full data forwarding, hazard detection, and branch flushing. Verified against 5 test programs using a self-checking testbench; achieved CPI of 1.08 on arithmetic-heavy workloads. Stack used: Icarus Verilog for simulation, GTKWave for waveform viewing, and Visual Studio Code with Verilog extensions for development."
           stack="Verilog, Icarus Verilog, GTKWave"
-          imgSrc="src\assets\riscv.png"
+          imgSrc="src\public\riscv.png"
           href="https://github.com/anjishnukar/RISCV-RV32I-Processor"
         />
         <Link
@@ -32,14 +32,14 @@ export const HoverImageLinks = () => {
           heading="Wipro Technologies Embedded Systems Internship Summer'26"
           subheading=""
           stack=""
-          imgSrc="src\assets\wipro.png"
+          imgSrc="src\public\wipro.png"
           href="#"
         />
         <Link
           heading="Siemens (Altair Engineering) Data Science Internship Summer'25"
           subheading="Developed an AI-powered system for automated detection and classification of PCB defects by integrating the YOLOv8n deep learning model within RapidMiner Studio. Utilized Python scripting in RapidMiner to streamline data preprocessing, model training, and batch predictions within a user-friendly environment. The system’s performance was validated using key metrics including precision, recall, F1 score, and mAP, achieving high reliability for real-time inspection and significantly improving the speed and accuracy of PCB quality control processes."
           stack="YOLOv8, PyTorch, Altair Rapidminer Studio"
-          imgSrc="src\assets\altair.png"
+          imgSrc="src\public\altair.png"
           href="#"
         />
         <p className="mt-9 text-5xl text-heading font-black">Club Projects</p>
@@ -47,21 +47,21 @@ export const HoverImageLinks = () => {
           heading="EDC Auditions Page"
           subheading="Designed and deployed a full-stack web application using React, Tailwind CSS, and Django to automate and streamline the club’s annual recruitment pipeline. Implemented fluid, dynamic user interfaces with Framer Motion to elevate user engagement and simplify a multi-step registration form for 200+ applicants. Centralized applicant data management on the backend, eliminating manual tracking and drastically reducing administrative overhead for the core team."
           stack="React, TailwindCSS, Framer Motion, Node.js"
-          imgSrc="src\assets\auditions.png"
+          imgSrc="src\public\auditions.png"
           href="https://github.com/anjishnukar/Auditions-Page"
         />
         <Link
           heading="NIT Durgapur's Official E-Summit Website"
           subheading="Engineered and deployed the official full-stack website for the second-largest entrepreneurial festival in East India, successfully supporting 2,000+ active participants. Designed and coded an interactive, gamified QR Hunt web application, implementing real-time progress tracking and secure backend validation for live festival attendees."
           stack = "GSAP, BootstrapCSS, Django"
-          imgSrc="src\assets\esummit.png"
+          imgSrc="src\public\esummit.png"
           href="https://github.com/anjishnukar/ESUMMIT-25"
         />
         <Link
           heading="Consultancy Collaboration with a Local Startup"
           subheading="Collaborated with an early-stage startup Viniyog One to conduct comprehensive market research and develop actionable go-to-market (GTM) strategies helping identify target customer segments, competitive positioning and growth opportunities"
           stack = "AARRR Framework, Market Research, GTM Strategy, Financial Modelling"
-          imgSrc="src\assets\vini.jpg"
+          imgSrc="src\public\vini.jpg"
           href="https://www.linkedin.com/posts/consultancy-wing-edc-nit-durgapur_edc-consulting-startups-activity-7443607585074798592-pQcy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAExS7NgB395bsC3kv1bTlnFQRx7rn9jAnjQ"
         />
       </div>
