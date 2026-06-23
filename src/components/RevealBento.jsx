@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiBluesky, SiGithub, SiGmail, SiIndeed, SiLeetcode, SiSpotify, SiSubstack, SiVsco } from "react-icons/si";
+import { SiBluesky, SiDevdotto, SiGithub, SiGmail, SiIndeed, SiLeetcode, SiSpotify, SiSubstack, SiVsco } from "react-icons/si";
 import DivOrigami from "./LogoOrigami";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdDocument } from "react-icons/io";
@@ -104,7 +104,7 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-black-500 md:col-span-3"
+      className="col-span-6 bg-green-800 md:col-span-3"
     >
       <a
         href="https://github.com/anjishnukar"
@@ -134,14 +134,14 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-green-600 md:col-span-3"
+      className="col-span-6 bg-black-500 md:col-span-3"
     >
       <a
-        href="https://open.spotify.com/user/d8j6bn51h5zvw0ltx05devvs4?si=ff11e68d21554920"
+        href="https://dev.to/anjishnukar"
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiSpotify />
+        <SiDevdotto />
       </a>
     </Block>
   </>
