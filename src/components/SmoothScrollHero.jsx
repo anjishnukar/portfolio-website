@@ -105,28 +105,28 @@ const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
-        src="src\public\anjishnuguitar.jpg"
+        src="public\anjishnuguitar.jpg"
         alt="anjishnu playing guitar"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
-        src="src\public\anjishnuinterview.png"
+        src="public\anjishnuinterview.png"
         alt="anjishnu interviewing someone"
         start={200}
         end={-400}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
-        src="src\public\anjishnukeyboard.jpg"
+        src="public\anjishnukeyboard.jpg"
         alt="anjishnu playing keyboard"
         start={-1000}
         end={-1300}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
-        src="src\public\anjishnurun.jpg"
+        src="public\anjishnurun.jpg"
         alt="anjishnu running"
         start={-600}
         end={-900}
