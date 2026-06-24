@@ -93,7 +93,7 @@ const CenterImage = () => {
         backgroundSize,
         opacity,
         backgroundImage:
-          "url(src//anjishnudrawing.jpg)",
+          "url(/anjishnudrawing.jpg)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
