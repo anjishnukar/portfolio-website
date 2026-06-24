@@ -74,7 +74,8 @@ const HeaderBlock = () => (
       </span>
     </h1>
     <a
-      href="#"
+      href="https://drive.google.com/file/d/1Q7RnVNhMypOrD90FzOEkVfEYvXYprfiI/view?usp=drive_link"
+      target="_blank"
       className="flex items-center gap-1 text-red-300 hover:underline"
     >
       view my resume <IoMdDocument />

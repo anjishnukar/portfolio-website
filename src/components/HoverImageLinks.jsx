@@ -1,6 +1,6 @@
 import { useMotionValue, motion, useSpring, useTransform } from "motion/react";
 import React, { useRef } from "react";
-import { FiArrowRight } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 
 export const HoverImageLinks = () => {
   return (
@@ -17,22 +17,27 @@ export const HoverImageLinks = () => {
         <Link
           heading="Bare-metal RTOS in C"
           subheading="Implemented a preemptive bare-metal RTOS from scratch in C and ARM Thumb-2 assembly for Cortex-M3, including cooperative/preemptive scheduler, context switching via PendSV, counting semaphores with blocked task queues, and stack overflow detection. Verified using QEMU emulation and GDB remote debugging"
-          imgSrc="/imgs/random/6.jpg"
+          stack="QEMU, GNU Debugger, C, Assembly, ARM Cortex-M3"
+          imgSrc="\rtos.jpg"
           href="https://github.com/anjishnukar/RTOS-Cortex-M"
         />
         <Link
           heading="Shell in C"
-          subheading="Implemented a simple command-line shell in C"
+          subheading=" Built a custom POSIX-style shell in C with command parsing, cd/echo/type builtin support and history,
+          PATH-based executable discovery, and interactive REPL behavior for a hands-on systems programming challenge."
           stack="C, POSIX Sockets"
-          imgSrc="/imgs/random/4.jpg"
+          imgSrc="\shell.png"
           href="https://github.com/anjishnukar/baremetal-shell"
         />
         <p className="mt-9 text-5xl text-heading font-black">Internship Projects</p>
         <Link
           heading="Wipro Technologies Embedded Systems Internship Summer'26"
-          subheading=""
-          stack=""
-          imgSrc="\wipro.png"
+          subheading="Engineered a low-latency computer vision pipeline pairing a Raspberry Pi 4 client with an NVIDIA Jetson gateway
+          via multi-threaded TCP sockets; implemented on-device motion gating to reduce GPU overhead and resolved
+          low-level hardware vector-instruction conflicts (SIGILL architecture errors) on Linux edge devices to stabilize edge
+          inference."
+          stack="Raspberry Pi, NVIDIA Jetson, OpenCV, Python, C++"
+          imgSrc="\wipro.jpg"
           href="#"
         />
         <Link
@@ -170,7 +175,7 @@ const Link = ({ heading, imgSrc, subheading, stack, href }) => {
         transition={{ type: "spring" }}
         className="relative z-10 p-4"
       >
-        <FiArrowRight className="text-5xl text-neutral-50" />
+        <FiExternalLink className="text-5xl text-neutral-50" />
       </motion.div>
     </motion.a>
   );

@@ -1,5 +1,6 @@
 import DivOrigami from "./LogoOrigami";
 import BlockInTextCard from "./BlockInTextCard";
+import { FaArrowCircleDown } from "react-icons/fa";
 
 
 function Projects() {
@@ -11,7 +12,7 @@ function Projects() {
                     tag="/ Projects"
                     text={
                     <>
-                        <strong>Projects.</strong> Here are some of the projects I've recently worked on
+                        <strong>Projects.</strong> Here are some of the projects I've recently worked on <FaArrowCircleDown className="inline-block animate-bounce" />
                     </>
                     }
                     examples={[
